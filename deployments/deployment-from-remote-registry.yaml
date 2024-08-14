@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-http-server-deployment
+  namespace: go-http-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-http-server
+  template:
+    metadata:
+      labels:
+        app: go-http-server
+    spec:
+      containers:
+        - name: go-http-server
+          image: antoniomarfer/go-http-server:latest
+          imagePullPolicy: Always # Pull images always from remote registry (Dockerhub)
+          resources:
+            limits:
+              memory: '512Mi'
+              cpu: '500m'
+          ports:
+            - containerPort: 8080
