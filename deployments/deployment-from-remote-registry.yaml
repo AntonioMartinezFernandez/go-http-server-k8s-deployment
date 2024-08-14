@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: go-http-server
-          image: antoniomarfer/go-http-server:latest
+          image: antoniomarfer/go-http-server:main
           imagePullPolicy: Always # Pull images always from remote registry (Dockerhub)
           resources:
             limits:
