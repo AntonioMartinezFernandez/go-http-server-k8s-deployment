@@ -77,6 +77,11 @@ just teardown
 
 ## Extra
 
+### CI/CD
+
+This repository contains a basic CI/CD pipeline (made with GitHub Actions), which runs the tests and uploads the docker image to the Dockerhub registry.
+You can check it in the `.github/workflows/main.yml` file.
+
 ### How to push docker image to dockerhub
 
 1. Access to `https://hub.docker.com/` and Sign In
@@ -86,7 +91,7 @@ just teardown
 ```bash
 sudo docker login # Enter username and password
 sudo docker build . --tag <username>/<repository-name>:<tag> --file <dockerfile-location>
-# Example: sudo docker build . --tag antoniomarfer/go-http-server:latest --file build/package/Dockerfile
+# Example: sudo docker build . --tag antoniomarfer/go-http-server:main --file build/package/Dockerfile
 sudo docker push <username>/<repository-name>:<tag>
-# Example: sudo docker push antoniomarfer/go-http-server:latest
+# Example: sudo docker push antoniomarfer/go-http-server:main
 ```
