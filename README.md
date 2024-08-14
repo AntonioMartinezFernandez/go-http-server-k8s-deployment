@@ -8,6 +8,7 @@ Just an example of deploying a simple golang http server on a Kubernetes cluster
 2. [Just](https://github.com/casey/just)
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 4. [Kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+5. Define `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` variables as `Actions` secrets into the Github repository Settings
 
 ## Available commands
 
