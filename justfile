@@ -1,3 +1,9 @@
+test:
+  go test -race ./...
+
+cleancache:
+  go clean -testcache
+
 run:
   @go run cmd/main.go
 
