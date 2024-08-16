@@ -12,6 +12,18 @@ Just an example of deploying a simple golang http server on a Kubernetes cluster
 
 ## Available commands
 
+**Run tests**
+
+```bash
+just test
+```
+
+**Clean tests cache**
+
+```bash
+just cleancache
+```
+
 **Run application as standalone**
 
 ```bash
